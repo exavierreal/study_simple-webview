@@ -19,10 +19,12 @@ function createWindow() {
     janela.loadURL(config.url);
 }
 
+// Criação de Toggle para ferramentas do desenvolvedor
 function toggleDevTools() {
     janela.webContents.toggleDevTools();
 }
 
+// Criação de atalhos dentro da aplicação
 function createShortcuts() {
     globalShortcut.register('CmdOrCtrl+J')
 }
