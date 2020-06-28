@@ -15,7 +15,9 @@ a ferramenta Electron.JS.
 ```
 
 - [x] Utilize o modelo inicial da documentação do Electron.
-> [Documentação] (https://www.electronjs.org/docs/tutorial/first-app)
+```
+    git clone https://github.com/electron/electron-quick-start
+```
 
 - [x] Retire as ferramentas do navegador que vem como padrão.
 
