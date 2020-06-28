@@ -8,25 +8,25 @@ o conteúdo aqui é apenas um código de estudo para conhecer mais sobre
 a ferramenta Electron.JS.
 
 ## PROCESSOS
-- [x] Inicie o projeto e instale o Electron.
+* Inicie o projeto e instale o Electron.
 ```
     npm init
     npm install electron
 ```
 
-- [x] Utilize o modelo inicial da documentação do Electron.
+* Utilize o modelo inicial da documentação do Electron.
 ```
     git clone https://github.com/electron/electron-quick-start
 ```
 
-- [x] Retire as ferramentas do navegador que vem como padrão.
+* Retire as ferramentas do navegador que vem como padrão.
 
 ```
     // Open the DevTools.
     win.webContents.openDevTools();
 ```
 
-- [x] Esconda a titleBar e defina o Always On Top pra fazer ela sobrepor
+* Esconda a titleBar e defina o Always On Top pra fazer ela sobrepor
     todas as aplicações.
 
 ```
@@ -38,7 +38,7 @@ a ferramenta Electron.JS.
     });
 ```
 
-- [x] Defina a variável win/janela como var/let pra criar a função
+* Defina a variável win/janela como var/let pra criar a função
       de toggle para as ferramentas do desenvolvedor.
 ```
     let janela;
@@ -55,7 +55,7 @@ a ferramenta Electron.JS.
     }
 ```
 
-- [x] Criar uma função para criar os atalhos da aplicação na hora
+* Crie uma função para criar os atalhos da aplicação na hora
       da inicialização da aplicação.
 ```
     function createShortcuts() {
@@ -69,7 +69,7 @@ a ferramenta Electron.JS.
 
 ```
 
-- [x] Executar a aplicação.
+* Execute a aplicação.
 ```
     npm start
 ```
