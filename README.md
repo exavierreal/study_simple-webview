@@ -2,19 +2,72 @@
 Criar um navegador flutuante que sobreponha todas as aplicação e
 abra as ferramentas do desenvolvedor utilizando Electron.
 
-# OBSERVAÇÕES
+### OBSERVAÇÕES
 Este é um projeto criado inicialmente pelo Mayk Brito da Rocketseat,
 o conteúdo aqui é apenas um código de estudo para conhecer mais sobre
 a ferramenta Electron.JS.
 
-# PROCESSOS
-[x] Inicie o projeto e instale o Electron.
-[x] Utilize o modelo inicial da documentação do Electron.
-[x] Retire as ferramentas do navegador que abre como padrão.
-[x] Esconda a titleBar e defina o Always On Top pra fazer ela sobrepor
+## PROCESSOS
+- [x] Inicie o projeto e instale o Electron.
+```
+    npm init
+    npm install electron
+```
+
+- [x] Utilize o modelo inicial da documentação do Electron.
+> [Documentação] (https://www.electronjs.org/docs/tutorial/first-app)
+
+- [x] Retire as ferramentas do navegador que vem como padrão.
+
+```
+    // Open the DevTools.
+    win.webContents.openDevTools();
+```
+
+- [x] Esconda a titleBar e defina o Always On Top pra fazer ela sobrepor
     todas as aplicações.
-[x] Defina a variável win/janela como var/let pra que criar a função
-    de toggle para as ferramentas do desenvolvedor.
-[x] Criar uma função para criar o projeto e definir essa função na 
-    inicialização da aplicação.
-[x] Testar código com npm start.
+
+```
+    const janela = new BrowserWindow({
+        [...]
+        titleBarStyle: 'hidden',
+        alwaysOnTop: 'true',
+        [...]
+    });
+```
+
+- [x] Defina a variável win/janela como var/let pra que criar a função
+      de toggle para as ferramentas do desenvolvedor.
+```
+    let janela;
+
+    function createWindow() {
+        janela = new BrowserWindow({
+            [...]
+        });
+    }
+```
+```
+    function toggleDevTools() {
+        janela.webContents.toggleDevTools();
+    }
+```
+
+- [x] Criar uma função para criar os atalhos da aplicação na hora
+      da inicialização da aplicação.
+```
+    function createShortcuts() {
+        globalShortcut.register('CmdOrCtrl+J')
+    }
+```
+```
+    app.whenReady()
+    .then(createWindow)
+    .then(createShortcuts);
+
+```
+
+- [x] Executar a aplicação.
+```
+    npm start
+```

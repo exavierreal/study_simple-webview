@@ -15,7 +15,7 @@ function createWindow() {
         }
     });
 
-    // Carregando o index.html da aplicação
+    // Carregando a página configurada para a aplicação
     janela.loadURL(config.url);
 }
 
