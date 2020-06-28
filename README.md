@@ -36,7 +36,7 @@ a ferramenta Electron.JS.
     });
 ```
 
-- [x] Defina a variável win/janela como var/let pra que criar a função
+- [x] Defina a variável win/janela como var/let pra criar a função
       de toggle para as ferramentas do desenvolvedor.
 ```
     let janela;
